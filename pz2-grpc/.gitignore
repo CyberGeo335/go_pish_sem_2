@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+.vscode/
+*.log
+bin/
+dist/
+build/
+coverage.out
+.tmp/
+tmp/
+
+# etc
+go_pish_sem_2/pz2-grpc/client
+go_pish_sem_2/pz2-grpc/server
