@@ -1,0 +1,9 @@
+.git
+bin
+tmp
+*.log
+.idea
+.vscode
+Dockerfile.old
+.env
+.DS_Store
