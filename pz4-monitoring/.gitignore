@@ -1,0 +1,12 @@
+# Go
+/bin/
+*.test
+coverage.out
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Grafana / Prometheus local data
+data/

@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: Go App Dashboards
+    orgId: 1
+    folder: Go Monitoring
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards
