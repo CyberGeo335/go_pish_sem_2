@@ -1,0 +1,25 @@
+package httpapi
+
+import "net/http"
+
+// LoggingResponseWriter wraps http.ResponseWriter and remembers the response status code.
+type LoggingResponseWriter struct {
+	http.ResponseWriter
+	statusCode int
+}
+
+func NewLoggingResponseWriter(w http.ResponseWriter) *LoggingResponseWriter {
+	return &LoggingResponseWriter{
+		ResponseWriter: w,
+		statusCode:     http.StatusOK,
+	}
+}
+
+func (lrw *LoggingResponseWriter) WriteHeader(code int) {
+	lrw.statusCode = code
+	lrw.ResponseWriter.WriteHeader(code)
+}
+
+func (lrw *LoggingResponseWriter) StatusCode() int {
+	return lrw.statusCode
+}
