@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Комментарии</title>
+</head>
+<body>
+    <h1>Комментарии</h1>
+
+    <p>Пользователь: <strong>{{.Name}}</strong></p>
+
+    <form method="POST" action="/comments">
+        <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+
+        <label for="text">Комментарий:</label><br>
+        <textarea id="text" name="text" rows="5" cols="60"></textarea><br>
+
+        <button type="submit">Добавить комментарий</button>
+    </form>
+
+    <h2>Список комментариев</h2>
+    {{if .Comments}}
+        {{range .Comments}}
+            <article>
+                <p><strong>{{.Author}}</strong> написал:</p>
+                <p>{{.Text}}</p>
+                <small>{{.CreatedAt.Format "02.01.2006 15:04:05"}}</small>
+            </article>
+            <hr>
+        {{end}}
+    {{else}}
+        <p>Комментариев пока нет.</p>
+    {{end}}
+
+    <p><a href="/profile">Вернуться к профилю</a></p>
+    <p><a href="/hello">Открыть приветствие</a></p>
+    <p><a href="/logout">Выйти</a></p>
+</body>
+</html>

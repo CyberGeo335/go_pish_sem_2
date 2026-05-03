@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Go build artifacts
+/bin/
+*.test
+*.out
+coverage.out
+
+# Environment files
+.env
+
+# Local TLS private keys should not be committed
+certs/*.key
+
+# IDE
+.idea/
+.vscode/

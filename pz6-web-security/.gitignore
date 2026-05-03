@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Go
+bin/
+*.test
+coverage.out
+
+# Local files
+cookies.txt
