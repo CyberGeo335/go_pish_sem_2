@@ -1,0 +1,14 @@
+# Go
+/bin/
+*.test
+coverage.out
+
+# Local env
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
