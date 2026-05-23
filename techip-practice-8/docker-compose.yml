@@ -1,0 +1,9 @@
+services:
+  tasks:
+    build:
+      context: ./services/tasks
+    image: techip-tasks:0.1
+    ports:
+      - "8080:8080"
+    environment:
+      HTTP_ADDR: ":8080"
