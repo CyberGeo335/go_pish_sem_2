@@ -1,0 +1,17 @@
+[Unit]
+Description=Tasks Service
+After=network.target
+
+[Service]
+Type=simple
+User=tasksuser
+WorkingDirectory=/opt/tasks
+EnvironmentFile=/etc/tasks/tasks.env
+ExecStart=/opt/tasks/tasks
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
