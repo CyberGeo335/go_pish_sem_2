@@ -1,0 +1,13 @@
+# Go build artifacts
+/bin/
+*.test
+coverage.out
+
+# Local files
+.DS_Store
+.env
+*.log
+
+# Example response files produced by README commands
+rest-list.json
+graphql-list.json
