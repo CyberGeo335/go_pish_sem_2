@@ -1,0 +1,13 @@
+# Go build output
+/bin/
+/dist/
+*.test
+*.out
+
+# Local env files
+.env
+.DS_Store
+
+# Editor folders
+.idea/
+.vscode/
